@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Wallpapers</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header container styling */
+        .header-container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .header-container img {
+            width: 100%;
+            height: 60vh; /* Display image at half screen height */
+            object-fit: cover; /* Ensure the image scales properly */
+        }
+
+        .header-container .header-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-container .header-text h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .header-container .header-text p {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        /* Section styling */
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        section img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        section a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Grid styling for sections */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 1200px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer style */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-container .header-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .header-container .header-text p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <img src="https://asset.gecdesigns.com/img/wallpapers/digital-art-of-nature-landscape-river-with-mountains-and-trees-in-the-background-wallpaper-image-sr28062408-cover.webp" alt="Background Image">
+        <div class="header-text">
+            <h1><b>Wallpix.com</b></h1>
+            <p>Transform Your Screens - Explore Stunning Wallpapers for Every Mood!</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div style="text-align: center; margin-top: 20px;">
+            <input 
+              type="text" 
+              id="searchBar" 
+              placeholder="Search wallpapers..." 
+              style="padding: 10px; width: 60%; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;" 
+            />
+            <button 
+              onclick="performSearch()"
+              style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+              Search
+            </button>
+        </div>
+    </div>
+
+    <!-- Wallpaper Categories -->
+    <div id="container" class="container">
+        <section data-category="nature">
+            <h2>Nature</h2>
+            <a href="https://wallpapers.com/nature">
+                <img src="https://i.pinimg.com/originals/a9/9e/34/a99e34c48753fa2cf4dc04a6b01f746d.jpg" alt="Nature">
+            </a>
+        </section>
+        <section data-category="flowers">
+            <h2>Flowers</h2>
+            <a href="https://wallpapers.com/flower">
+                <img src="https://wallpapers.com/images/hd/world-s-most-beautiful-flowers-colourful-daisies-o8oxx5oxshczp29w.jpg" alt="Flowers">
+            </a>
+        </section>
+        <section data-category="cars">
+            <h2>Cars</h2>
+            <a href="https://wallpapers.com/car">
+                <img src="https://e0.pxfuel.com/wallpapers/355/795/desktop-wallpaper-index-of-wp-content-uploads-car-1-cars-lamborgini.jpg" alt="Cars">
+            </a>
+        </section>
+        <section data-category="among us">
+            <h2>Among Us</h2>
+            <a href="https://wallpapers.com/among-us-background">
+                <img src="https://e1.pxfuel.com/desktop-wallpaper/804/1018/desktop-wallpaper-2-among-us-game.jpg" alt="Among Us">
+            </a>
+        </section>
+        <section data-category="anime">
+            <h2>Anime</h2>
+            <a href="https://wallpapers.com/anime">
+                <img src="https://wallpapers-clan.com/wp-content/uploads/2024/12/arlecchino-genshin-impact-dark-desktop-wallpaper-preview.jpg" alt="Anime">
+            </a>
+        </section>
+        <section data-category="gaming">
+            <h2>Gaming</h2>
+            <a href="https://wallpapers.com/gaming">
+                <img src="https://wallpapers.com/images/hd/pubg-combat-4k-qpsj99bev5m4d206.jpg" alt="Gaming">
+            </a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Wallpix.com. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function performSearch() {
+            const query = document.getElementById('searchBar').value.toLowerCase();
+            const sections = document.querySelectorAll('section');
+            let found = false;
+
+            sections.forEach(section => {
+                const category = section.getAttribute('data-category');
+                if (category.includes(query)) {
+                    section.style.display = "block";
+                    found = true;
+                } else {
+                    section.style.display = "none";
+                }
+            });
+
+            if (!found) {
+                alert('No results found for "' + query + '"');
+            }
+        }
+    </script>
+</body>
+</html>
